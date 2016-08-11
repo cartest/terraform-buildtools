@@ -6,7 +6,7 @@ module "environment" {
   vpc_id                          = "${aws_vpc.vpc.id}"
   environment                     = "${var.environment}"
   project                         = "${var.project}"
-  region_az_count                 = "3"
+  region_az_count                 = "${var.region_az_count}"
   internet_gateway_id             = "${aws_internet_gateway.internet_gateway.id}"
   bootstrap_public_route_table_id = "${aws_route_table.public.id}"
 }
