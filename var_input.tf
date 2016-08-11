@@ -18,7 +18,7 @@ variable "environment" {
 
 variable "project" {
   type        = "string"
-  defauilt    = "PROJECT"
+  default     = "PROJECT"
   description = "Project/Application Name"
 }
 
