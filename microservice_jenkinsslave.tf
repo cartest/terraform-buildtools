@@ -11,7 +11,7 @@ module "microservice_jenkinsslave" {
   subnets_cidr                    = ["10.0.0.0/24", "10.0.1.0/24", "10.0.2.0/24"]
   subnets_map_public_ip_on_launch = true
   subnets_route_tables            = ["${aws_route_table.public.id}"]
-  vpc_id                          = "${var.vpc_id}"
+  vpc_id                          = "${aws_vpc.vpc.id}"
 
   tags {
     Environment = "${var.environment}"
