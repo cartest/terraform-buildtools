@@ -27,3 +27,9 @@ variable "aws_region" {
   default     = "eu-west-1"
   description = "AWS Region"
 }
+
+variable "region_az_count" {
+  type        = "string"
+  default     = "3"
+  description = "An ugly hack"
+}

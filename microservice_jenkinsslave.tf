@@ -23,6 +23,6 @@ module "microservice_jenkinsslave" {
 
 resource "aws_route_table_association" "jenkinsslave-public" {
   count          = "${var.region_az_count}"
-  subnet_id      = "${module.microservice_jenkins.subnet_ids[count.index]}"
+  subnet_id      = "${module.microservice_jenkinsslave.subnet_ids[count.index]}"
   route_table_id = "${aws_route_table.public.id}"
 }
