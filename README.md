@@ -9,3 +9,4 @@ Creates:
    * A flow log (to be used as output or remote state into cwles)
    * A Jenkins slave microservice
    * A Route53 Private Hosted Zone
+   * VPC Peering connections
