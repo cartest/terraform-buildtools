@@ -10,11 +10,3 @@ module "environment" {
   internet_gateway_id             = "${aws_internet_gateway.internet_gateway.id}"
   bootstrap_public_route_table_id = "${aws_route_table.public.id}"
 }
-
-module "vpc_peers" {
-  source                = "github.com/Zordrak/terraform-vpc-peering.git"
-  aws_region            = "${var.aws_region}"
-  source_aws_account_id = "${var.aws_account_id}"
-  source_vpc_id         = "${var.vpc_id}"
-  peer_vpcs             = "${var.peer_vpcs}"
-}
