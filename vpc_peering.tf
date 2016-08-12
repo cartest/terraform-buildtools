@@ -1,5 +1,6 @@
 module "vpc_peering_connections" {
-  source                = "../terraform-vpc-peering"
+#  source                = "../terraform-vpc-peering"
+  source                = "github.com/Zordrak/terraform-vpc-peering.git"
   environment           = "${var.environment}"
   peer_matrix           = "${var.peer_matrix}"
   project               = "${var.project}"
