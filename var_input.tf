@@ -17,9 +17,9 @@ variable "environment" {
 }
 
 variable "peer_vpcs" {
-  type        = "list"
-  default     = []
-  description = "List of VPCs to create/own peering connections with"
+  type        = "map"
+  default     = {}
+  description = "Map of 'aws_account_id => vpc_id' to peer with"
 }
 
 variable "private_dns_domain" {
