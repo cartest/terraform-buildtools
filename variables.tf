@@ -18,7 +18,10 @@ variable "environment" {
 
 variable "peer_vpcs" {
   type        = "map"
-  default     = {}
+  default     = {
+    "0123456789012" = "vpc-01234567890123456"
+    "2109876543210" = "vpc-65432109876543210"
+  }
   description = "Map of 'aws_account_id => vpc_id' to peer with"
 }
 
