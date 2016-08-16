@@ -13,3 +13,19 @@ output "internet_gateway_id" {
 output "flow_log_id" {
   value = "${aws_flow_log.flow_log.id}"
 }
+
+output "bootstrap_public_route_table_id" {
+  value = "aws_route_table.public.id"
+}
+
+output "aws_region" {
+  value = "${var.aws_region}"
+}
+
+output "environment" {
+  value = "${var.environment}"
+}
+
+output "project" {
+  value = "${var.project}"
+}
