@@ -2,7 +2,7 @@
 # This in future will be run as an explicitly seperate Jenkins slave job, not invoked here
 module "environment" {
 #  source                          = "../terraform-environment"
-  source                          = "github.com/Zordrak/terraform-environment.git"
+  source                          = "github.com/cartest/terraform-environment.git"
   aws_region                      = "${var.aws_region}"
   vpc_id                          = "${aws_vpc.vpc.id}"
   environment                     = "${var.environment}"

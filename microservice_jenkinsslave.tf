@@ -1,5 +1,5 @@
 module "microservice_jenkinsslave" {
-  source                          = "github.com/Zordrak/terraform-microservice.git"
+  source                          = "github.com/cartest/terraform-microservice.git"
   additional_security_group_ids   = []
   asg_size_max                    = "1"
   asg_size_min                    = "1"
