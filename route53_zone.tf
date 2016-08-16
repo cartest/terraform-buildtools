@@ -10,8 +10,3 @@ resource "aws_route53_zone" "private" {
     Tier        = "PRI"
   }
 }
-
-resource "aws_route53_zone_association" "route53_zone_association_private" {
-  zone_id = "${aws_route53_zone.private.id}"
-  vpc_id  = "${aws_vpc.vpc.id}"
-}
