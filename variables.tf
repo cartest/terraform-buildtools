@@ -16,6 +16,12 @@ variable "environment" {
   description = "Environment Name"
 }
 
+variable "peering_connections" {
+  type        = "list"
+  default     = []
+  description = "A list of peering connections to propagate to all 5 route tables"
+}
+
 variable "peer_matrix" {
   type        = "list"
   default     = []
