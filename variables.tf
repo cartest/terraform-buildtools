@@ -1,9 +1,3 @@
-variable "aws_account_id" {
-  type        = "string"
-  default     = "000000000000"
-  description = "AWS Account ID"
-}
-
 variable "aws_region" {
   type        = "string"
   default     = "eu-west-1"
@@ -12,8 +6,12 @@ variable "aws_region" {
 
 variable "environment" {
   type        = "string"
-  default     = "ENVIRONMENT"
   description = "Environment Name"
+}
+
+variable "ha-nat_subnets_cidrs" {
+  type        = "list"
+  description = "A list of CIDR blocks to create NAT Gateways in, iterating through available availability zones"
 }
 
 variable "peering_connections" {
@@ -23,8 +21,8 @@ variable "peering_connections" {
 }
 
 variable "peer_matrix" {
-  type        = "list"
-  default     = []
+  type    = "list"
+  default = []
   #   "0123456789012,vpc-01234567890123456,10.99.0.0/16",
   #   "2109876543210,vpc-65432109876543210,172.16.0.0/16"
   # ]
@@ -33,13 +31,11 @@ variable "peer_matrix" {
 
 variable "private_dns_domain" {
   type        = "string"
-  default     = "environment.project.platform.client"
   description = "Private Hosted Zone domain name for the VPC"
 }
 
 variable "project" {
   type        = "string"
-  default     = "PROJECT"
   description = "Project/Application Name"
 }
 
@@ -51,6 +47,5 @@ variable "region_az_count" {
 
 variable "vpc_cidr" {
   type        = "string"
-  default     = "10.0.0.0/16"
   description = "VPC CIDR Block"
 }
