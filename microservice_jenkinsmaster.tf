@@ -1,4 +1,4 @@
-# module "microservice_jenkinsslave" {
+# module "microservice_jenkinsmaster" {
 #   source                          = "github.com/cartest/terraform-microservice.git"
 #   additional_security_group_ids   = []
 #   asg_size_max                    = "1"
@@ -17,6 +17,6 @@
 #     Environment = "${var.environment}"
 #     Application = "${var.project}"
 #     Tier        = "PUB"
-#     Role        = "jenkinsslave"
+#     Role        = "jenkinsmaster"
 #   }
 # }
