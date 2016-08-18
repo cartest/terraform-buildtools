@@ -11,6 +11,7 @@ variable "environment" {
 
 variable "ha-nat_subnets_cidrs" {
   type        = "list"
+  default     = ["10.222.1.0/24", "10.222.2.0/24", "10.222.3.0/24"]
   description = "A list of CIDR blocks to create NAT Gateways in, iterating through available availability zones"
 }
 
@@ -47,5 +48,6 @@ variable "region_az_count" {
 
 variable "vpc_cidr" {
   type        = "string"
+  default     = "10.222.0.0/16"
   description = "VPC CIDR Block"
 }
