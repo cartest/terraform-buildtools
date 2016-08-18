@@ -1,5 +1,5 @@
 module "ha-nat" {
-  source               = "../terraform-ha-nat"
+  source               = "github.com/cartest/terraform-ha-nat.git"
   availability_zones   = "${data.aws_availability_zones.available.names}"
   aws_region           = "${var.aws_region}"
   name                 = "ha-nat"
