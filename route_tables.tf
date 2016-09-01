@@ -1,5 +1,5 @@
 resource "aws_route_table" "private_nats" {
-  count = "${var.region_az_count}"
+  count = "${length(var.ha-nat_subnets_cidrs)}"
 
   vpc_id = "${aws_vpc.vpc.id}"
 
