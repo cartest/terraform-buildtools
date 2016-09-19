@@ -16,7 +16,7 @@ module "ha-nat" {
 }
 
 resource "aws_route_table_association" "ha-nat_public" {
-  count          = "${var.region_az_count}"
+  count          = "${length(var.ha-nat_subnets_cidrs)}"
   subnet_id      = "${module.ha-nat.subnet_ids[count.index]}"
   route_table_id = "${aws_route_table.public.id}"
 }
